@@ -99,8 +99,8 @@ Projeto desenvolvido para fins educacionais. O uso da API Gemini deve respeitar 
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Seu Nome Aqui**
+Desenvolvido por **Gustavo Marques**
 🔗 [LinkedIn](https://www.linkedin.com/in/gustavo-marques-5a3723294/)
-🐙 GitHub: [@seu-usuario](https://github.com/GustavoMarques22)
+🐙 GitHub: [@GustavoMarques22](https://github.com/GustavoMarques22)
 
 ---
