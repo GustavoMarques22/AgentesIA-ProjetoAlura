@@ -1,86 +1,103 @@
-**Sistema de Criação de Posts para Instagram com 4 Agentes (Google Gemini)**
+```markdown
+# 🚀 Sistema Inteligente de Criação de Posts para Instagram com Agentes Gemini
+
+Este projeto apresenta uma solução automatizada para a **criação de conteúdo para Instagram**, utilizando **inteligência artificial generativa** com o **Google Gemini**. Por meio da arquitetura de **agentes especializados**, o sistema executa as etapas de pesquisa, planejamento, redação e revisão de posts com foco em tendências atuais.
+
+> 💡 Ideal para criadores de conteúdo, profissionais de marketing digital e entusiastas de IA que desejam automatizar a produção de posts criativos e relevantes.
 
 ---
 
-````markdown
-# 🤖 Sistema de Criação de Posts para Instagram com 4 Agentes (Google Gemini)
+## 🧠 Arquitetura de Agentes
 
-Este projeto demonstra um fluxo completo de criação de conteúdo para redes sociais usando agentes inteligentes integrados com a API do **Google Gemini**. Ele foi desenvolvido para rodar em **Google Colab**, utilizando ferramentas de busca em tempo real e modelos generativos para criar, planejar, redigir e revisar posts voltados para o Instagram.
+O sistema é dividido em 4 agentes colaborativos, cada um com uma função específica:
 
-## 📌 Funcionalidades
+| Agente          | Função                                                                 |
+|-----------------|------------------------------------------------------------------------|
+| 🔎 **Buscador**     | Pesquisa os lançamentos mais recentes e relevantes sobre um tema.     |
+| 🧭 **Planejador**   | Estrutura os principais tópicos e pontos-chave do post.               |
+| ✍️ **Redator**      | Redige o conteúdo com tom engajador e linguagem otimizada para o IG. |
+| 🪄 **Revisor**       | Ajusta o texto, melhora o estilo e garante a clareza da mensagem.     |
 
-- 🔎 **Agente Buscador**: Localiza os lançamentos mais relevantes e recentes sobre um tópico específico.
-- 🧠 **Agente Planejador**: Planeja os principais pontos a serem abordados em um post com base nas tendências identificadas.
-- ✍️ **Agente Redator**: Cria um rascunho de post criativo, engajador e otimizado para o Instagram.
-- 📝 **Agente Revisor**: Analisa e revisa o post com foco em clareza, tom e adequação ao público jovem.
+---
 
-## 📅 Exemplo de Uso
+## 📷 Exemplo de Aplicação
 
-Você pode executar esse projeto no Google Colab para gerar posts sobre temas atuais, como por exemplo:
+Durante a execução no Google Colab, o usuário insere um **tópico** de interesse:
 
-```bash
-❓ Por favor, digite o TÓPICO sobre o qual você quer criar o post de tendências:
+```
+
+📌 Digite o tema sobre o qual deseja criar o post (ex: Inteligência Artificial na Saúde):
+
 ````
 
-**Exemplo de entrada**: `Inteligência Artificial na Educação`
-
 O sistema então:
+1. Coleta informações relevantes com base nas tendências.
+2. Planeja a estrutura do post.
+3. Gera o conteúdo.
+4. Revê o texto com foco em clareza, criatividade e impacto.
 
-1. Busca lançamentos recentes sobre o tópico.
-2. Planeja os pontos principais do post.
-3. Redige o conteúdo.
-4. Revisa e sugere melhorias.
+---
 
-## 🛠️ Tecnologias e Bibliotecas Utilizadas
+## 🧰 Tecnologias Utilizadas
 
-* `google-genai`: Integração com a API do Gemini
-* `google-adk`: Framework para construção de agentes com ferramentas como `google_search`
-* `Google Colab`: Ambiente de execução interativo
-* `IPython.display`, `textwrap`, `requests`, `datetime`, `warnings`
+- 🧠 **[Google Gemini API](https://ai.google.dev/)**
+- 🧩 `google-genai` e `google-adk` (Agentes e Ferramentas)
+- ☁️ **Google Colab**
+- 🐍 Python 3
+- 📦 Bibliotecas auxiliares: `requests`, `datetime`, `IPython.display`, `textwrap`
 
-## 🧪 Requisitos
+---
 
-* Conta Google com acesso ao Google Colab
-* Chave de API do Google Gemini (GOOGLE\_API\_KEY) configurada via `google.colab.userdata`
-* Pacotes instalados:
+## ⚙️ Como Executar
+
+1. Faça o clone deste repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+````
+
+2. Acesse o [notebook no Google Colab]([(https://colab.research.google.com/drive/1bmCwOWTjo5bliCzaTdhIaVwZCKAc7vPP?usp=sharing)]).
+3. Insira sua chave de API Gemini:
+
+   ```python
+   from google.colab import userdata
+   userdata.set('GOOGLE_API_KEY', 'sua-chave-aqui')
+   ```
+4. Execute célula por célula.
+5. Insira o tópico desejado e acompanhe a geração do post.
+
+---
+
+## 📄 Resultado Esperado
+
+* Post completo e otimizado para Instagram.
+* Linguagem criativa e direcionada ao público jovem.
+* Sugestões de melhorias feitas por IA.
+* Conteúdo pronto para publicação!
+
+---
+
+## 📌 Requisitos
+
+* Conta no Google com acesso ao Colab
+* Chave de API Gemini ativa
+* Instalação dos pacotes:
 
   ```python
   %pip install -q google-genai
   %pip install -q google-adk
   ```
 
-## 🧠 Modelo Utilizado
+---
 
-* `gemini-2.0-flash` (para buscas e planejamento)
-* `gemini-2.5-pro-preview-03-25` (para redação e revisão)
+## 📜 Licença
 
-## 📂 Estrutura do Código
-
-* Funções auxiliares para comunicação com os agentes
-* Execução sequencial dos agentes
-* Entrada interativa via `input()`
-* Impressões formatadas com `Markdown` no Colab
-
-## 🚀 Como Executar
-
-1. Clone este repositório.
-2. Abra o notebook no Google Colab.
-3. Insira sua chave da API do Google Gemini.
-4. Execute célula por célula.
-5. Insira um tópico de interesse e acompanhe a geração do post.
-
-## 📸 Exemplo de Resultado Final
-
-> Você terá um post pronto para publicar no Instagram, com hashtags e linguagem otimizada!
-
-## 📝 Licença
-
-Este projeto é de uso educacional e segue os termos de uso da API do Google Gemini.
+Projeto desenvolvido para fins educacionais. O uso da API Gemini deve respeitar os termos de uso oficiais do Google.
 
 ---
 
-Feito com ❤️ por \[Gustavo Marques] — Projeto educacional com foco em IA generativa para criação de conteúdo.
+## 👨‍💻 Autor
 
-```
+Desenvolvido por \[Gustavo Marques]
+🔗 [Seu LinkedIn]([(https://www.linkedin.com/in/gustavo-marques-5a3723294/)]) | 🐙 [@seu-usuario]([(https://github.com/GustavoMarques22)])
 
 ---
